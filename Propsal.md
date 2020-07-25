@@ -19,16 +19,16 @@ I plan to use the dungeons and dragons api to display spells and other informati
 
 ### mvp
 - access and display spells from the api
-- show spell description
-- show spell components
+- show spell information
 ### silver
-- display what classes can use spells 
 - make the list of spells filterable by name
 - ability to display information on monsters
+
 
 ### gold
 - ability to display information on in game equipment
 - display game mechanics 
+- game info
 
 
 ## link to endpoint
