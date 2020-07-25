@@ -36,3 +36,9 @@ I plan to use the dungeons and dragons api to display spells and other informati
 https://www.dnd5eapi.co/api/spells
 
 ## component hierarchy
+### mvp hierarchy
+<img width="404" alt="Screen Shot 2020-07-25 at 5 09 40 PM" src="https://user-images.githubusercontent.com/67292469/88466380-ba5a0000-ce99-11ea-99a5-ed13c6a11c33.png">
+
+### gold hierarchy
+
+<img width="766" alt="Screen Shot 2020-07-25 at 5 09 56 PM" src="https://user-images.githubusercontent.com/67292469/88466400-e2496380-ce99-11ea-97ad-c5a7558ac95a.png">
