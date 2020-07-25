@@ -2,9 +2,18 @@
 
 ## description
 
-i plan to use the dungeons and dragons api to display spells and other information from the current version.
+I plan to use the dungeons and dragons api to display spells and other information from the current version.
 
 ## wireframes
+
+### mvp homepage
+<img width="842" alt="Screen Shot 2020-07-25 at 4 15 13 PM" src="https://user-images.githubusercontent.com/67292469/88465567-25073d80-ce92-11ea-90ca-dd9cb4602276.png">
+
+### mvp info page
+<img width="842" alt="Screen Shot 2020-07-25 at 4 15 27 PM" src="https://user-images.githubusercontent.com/67292469/88465574-38b2a400-ce92-11ea-9939-ef6867f3fc32.png">
+
+### gold homepage
+<img width="842" alt="Screen Shot 2020-07-25 at 4 15 49 PM" src="https://user-images.githubusercontent.com/67292469/88465584-42d4a280-ce92-11ea-807c-8c10e406cd41.png">
 
 ## user stories
 
@@ -19,7 +28,7 @@ i plan to use the dungeons and dragons api to display spells and other informati
 
 ### gold
 - ability to display information on in game equipment
-
+- display game mechanics 
 
 
 ## link to endpoint
