@@ -41,4 +41,4 @@ https://www.dnd5eapi.co/api/spells
 
 ### gold hierarchy
 
-<img width="766" alt="Screen Shot 2020-07-25 at 5 09 56 PM" src="https://user-images.githubusercontent.com/67292469/88466400-e2496380-ce99-11ea-97ad-c5a7558ac95a.png">
+<img width="831" alt="Screen Shot 2020-07-27 at 3 27 41 PM" src="https://user-images.githubusercontent.com/67292469/88583124-cc64ab80-d01d-11ea-8f68-8f10dbc1f80e.png">
