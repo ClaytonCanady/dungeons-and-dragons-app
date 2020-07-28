@@ -3,7 +3,24 @@ import { Route, Link } from 'react-router-dom';
 import './App.css';
 import Home from './Home.js';
 import SpellList from './SpellList';
+import SpellInfo from './SpellInfo';
 class App extends Component {
+	constructor() {
+		super();
+		this.state = {
+			spells: [],
+		};
+	}
+	componentDidMount() {
+		fetch('https://www.dnd5eapi.co/api/spells')
+			.then((results) => results.json())
+			.then((results) => {
+				this.setState({ spells: results.results });
+			})
+			.catch((err) => {
+				console.error(err);
+			});
+	}
 	render() {
 		return (
 			<div className='App'>
@@ -20,7 +37,24 @@ class App extends Component {
 				</header>
 				<main>
 					<Route path='/' exact component={Home} />
-					<Route path='/spell-list' component={SpellList} />
+					<Route
+						path='/spell-list'
+						render={() => {
+							return <SpellList spells={this.state.spells} return />;
+						}}
+					/>
+					<Route
+						path='/info/:spellName'
+						render={(routerProps) => {
+							return (
+								<SpellInfo
+									spells={this.state.spells}
+									match={routerProps.match}
+									return
+								/>
+							);
+						}}
+					/>
 				</main>
 			</div>
 		);
