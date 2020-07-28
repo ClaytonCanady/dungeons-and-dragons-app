@@ -14,6 +14,7 @@ class SpellList extends Component {
 				</div>
 			);
 		});
+		
 		return (
 			<div className='spell-container'>
 				{list}
