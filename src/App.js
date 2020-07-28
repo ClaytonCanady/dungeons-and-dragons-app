@@ -28,10 +28,10 @@ class App extends Component {
 					<h1>D&D SpellFinder</h1>
 					<nav>
 						<Link to='/'>
-							<p>home</p>
+							<p>Home</p>
 						</Link>
 						<Link to='/spell-list'>
-							<p>spell list</p>
+							<p>Spell List</p>
 						</Link>
 					</nav>
 				</header>

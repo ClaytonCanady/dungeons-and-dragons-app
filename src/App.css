@@ -1,9 +1,31 @@
 header {
-  background-color: rgb(207, 31, 31);
-  height: 10vh;
-  margin: 0;
-  padding: 10px;
-  text-align: center;
-  color: white;
+	background-color: rgb(207, 31, 31);
+	height: 10vh;
+	margin: 0;
+	padding: 1px;
+	text-align: center;
+	color: white;
   height: fit-content;
+  text-decoration: none;
+}
+
+.spell-container a {
+	text-decoration: none;
+	color: rgb(0, 0, 0);
+}
+.spell-container {
+	margin: 0;
+}
+.spell-info {
+  text-align: center;
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+nav {
+  display: flex;
 }

@@ -25,6 +25,9 @@ class SpellInfo extends Component {
 		return (
 			<div className='spell-info'>
 				<h2>{this.state.spell.name}</h2>
+				<h4>
+					{this.state.spell.name} is a Lvl {this.state.spell.level} spell that takes {this.state.spell.casting_time} to cast. It has a range of {this.state.spell.range}.
+				</h4>
 				<p>{this.state.spell.desc}</p>
 			</div>
 		);
