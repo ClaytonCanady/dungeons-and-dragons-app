@@ -29,3 +29,6 @@ nav a {
 nav {
   display: flex;
 }
+.spell-info p {
+  text-align: left;
+}
