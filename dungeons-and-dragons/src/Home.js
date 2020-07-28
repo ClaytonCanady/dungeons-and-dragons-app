@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import SpellList from './SpellList';
 class Home extends Component {
     render() {
         return (
