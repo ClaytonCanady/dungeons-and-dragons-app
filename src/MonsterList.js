@@ -20,7 +20,7 @@ class MonsterList extends Component {
 			});
 		let list = monsters.map((monster, index) => {
 			return (
-				<div className='monster' monster={monster[index]} key={index}>
+				<div className='item' monster={monster[index]} key={index}>
 					<Link to={/monsters/ + monster.name} monster={monster[index]}>
 						<h1>{monster.name}</h1>
 					</Link>
@@ -29,7 +29,7 @@ class MonsterList extends Component {
 		});
 
 		return (
-			<div className='spell-container'>
+			<div className='list-container'>
 				<form>
 					<input
 						type='text'

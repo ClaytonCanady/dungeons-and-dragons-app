@@ -9,14 +9,14 @@ header {
 	text-decoration: none;
 }
 
-.spell-container a {
+.list-container a {
 	text-decoration: none;
 	color: rgb(0, 0, 0);
 }
-.spell-container {
+.list-container {
 	margin: 0;
 }
-.spell-info {
+.info {
 	text-align: center;
 	padding-left: 10vw;
 	padding-right: 10vw;
@@ -29,9 +29,24 @@ nav a {
 nav {
 	display: flex;
 }
-.spell-info p {
-	text-align: left;
+.info p {
+	font-weight: bold;
 }
 .home {
 	text-align: center;
+}
+.list-container form {
+	color: white;
+	background-color: rgb(207, 31, 31);
+	text-align: center;
+	
+}
+input {
+	width: 200px;
+	height: 40px;
+	margin-left: 5px;
+	font-size: large;
+}
+.item {
+	margin-left: 5px;
 }

@@ -19,7 +19,7 @@ this.setState({search: e.target.value})
 		})
 		let list = spells.map((spell, index) => {
 			return (
-				<div className='spell' spell={spell[index]} key={index}>
+				<div className='item' spell={spell[index]} key={index}>
 					<Link to={/info/ + spell.name} spell={spell[index]}>
 						<h1>{spell.name}</h1>
 					</Link>
@@ -29,7 +29,7 @@ this.setState({search: e.target.value})
 		});
 		
 		return (
-			<div className='spell-container'>
+			<div className='list-container'>
 				<form>
 					<input type='text' onChange={this.handleChange} placeholder='search spells'></input>
 				</form>

@@ -23,7 +23,7 @@ class MonsterInfo extends Component {
 	render() {
 		console.log(this.state.monster);
 		return (
-			<div className='spell-info'>
+			<div className='info'>
 				<h2>{this.state.monster.name}</h2>
 				<h4>
 		This size {this.state.monster.size} {this.state.monster.type} has a challenge rating of {this.state.monster.challenge_rating} and an Alignment of {this.state.monster.alignment}.
