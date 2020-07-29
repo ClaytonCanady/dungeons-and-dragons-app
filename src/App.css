@@ -50,3 +50,10 @@ input {
 .item {
 	margin-left: 5px;
 }
+li{
+	list-style: none;
+	padding-bottom: 5px;
+}
+ul {
+	padding: 0;
+}
