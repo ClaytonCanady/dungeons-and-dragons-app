@@ -34,6 +34,7 @@ nav {
 }
 .home {
 	text-align: center;
+	margin: 5px;
 }
 .list-container form {
 	color: white;

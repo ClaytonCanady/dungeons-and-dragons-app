@@ -1,6 +1,14 @@
 # dungeons-and-dragons-app
+### Clayton Candy
+This application uses react and react-router to access the D&D 5th edition API found at http://www.dnd5eapi.co/
 
- - Description: Describe at a high level what your project is and the motivation for the project (i.e., what problem(s) your projects solves) and includes a screenshot of the application in the browser.
- - Technologies Used: A list of the languages, libraries and frameworks used in your application.
- - Getting Started/Installation Instructions: This would likely describe how to use the application and the steps to fork, clone and run the application.
- - Contribution Guidelines: This section should offer guidance on where and how users can contribute to your code, identify bugs, and propose improvements.
+## Images of site
+
+## Features
+- Filter search to narrow results
+- Over 300 spells
+- Over 300 monsters
+## Technology's Used
+## Usage Instructions
+This is intended to be a stand alone project, however feel free to message me to discuss integrating it into another project.
+## Contribution Guidelines
