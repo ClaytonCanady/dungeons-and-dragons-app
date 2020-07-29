@@ -21,7 +21,7 @@ class MonsterInfo extends Component {
 			});
 	}
 	render() {
-		console.log(this.state.monster);
+	
 		return (
 			<div className='info'>
 				<h2>{this.state.monster.name}</h2>

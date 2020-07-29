@@ -40,7 +40,6 @@ nav {
 	color: white;
 	background-color: rgb(207, 31, 31);
 	text-align: center;
-	
 }
 input {
 	width: 200px;
@@ -51,10 +50,13 @@ input {
 .item {
 	margin-left: 5px;
 }
-li{
+li {
 	list-style: none;
 	padding-bottom: 5px;
 }
 ul {
 	padding: 0;
+}
+.home img {
+	width: 80vw;
 }
