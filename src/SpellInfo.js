@@ -21,7 +21,6 @@ class SpellInfo extends Component {
 			});
 	}
 	render() {
-		console.log(this.state.spell);
 		return (
 			<div className='spell-info'>
 				<h2>{this.state.spell.name}</h2>

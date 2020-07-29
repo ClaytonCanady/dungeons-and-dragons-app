@@ -4,15 +4,25 @@ import './App.css';
 import Home from './Home.js';
 import SpellList from './SpellList';
 import SpellInfo from './SpellInfo';
+import MonsterList from './MonsterList';
+import MonsterInfo from './MonsterInfo';
 class App extends Component {
 	constructor() {
 		super();
 		this.state = {
 			spells: [],
-			monsters: []
+			monsters: [],
 		};
 	}
 	componentDidMount() {
+		fetch('https://www.dnd5eapi.co/api/monsters')
+			.then((results) => results.json())
+			.then((results) => {
+				this.setState({ monsters: results.results });
+			})
+			.catch((err) => {
+				console.error(err);
+			});
 		fetch('https://www.dnd5eapi.co/api/spells')
 			.then((results) => results.json())
 			.then((results) => {
@@ -22,7 +32,9 @@ class App extends Component {
 				console.error(err);
 			});
 	}
+
 	render() {
+		console.log(this.state);
 		return (
 			<div className='App'>
 				<header>
@@ -33,6 +45,9 @@ class App extends Component {
 						</Link>
 						<Link to='/spell-list'>
 							<p>Spell List</p>
+						</Link>
+						<Link to='/monster-list'>
+							<p>Monster List</p>
 						</Link>
 					</nav>
 				</header>
@@ -50,6 +65,24 @@ class App extends Component {
 							return (
 								<SpellInfo
 									spells={this.state.spells}
+									match={routerProps.match}
+									return
+								/>
+							);
+						}}
+					/>
+					<Route
+						path='/monster-list'
+						render={() => {
+							return <MonsterList monsters={this.state.monsters} return />;
+						}}
+					/>
+					<Route
+						path='/monsters/:monsterName'
+						render={(routerProps) => {
+							return (
+								<MonsterInfo
+									monsters={this.state.monsters}
 									match={routerProps.match}
 									return
 								/>
