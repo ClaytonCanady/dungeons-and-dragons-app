@@ -5,8 +5,8 @@ header {
 	padding: 1px;
 	text-align: center;
 	color: white;
-  height: fit-content;
-  text-decoration: none;
+	height: fit-content;
+	text-decoration: none;
 }
 
 .spell-container a {
@@ -17,18 +17,21 @@ header {
 	margin: 0;
 }
 .spell-info {
-  text-align: center;
-  padding-left: 10vw;
-  padding-right: 10vw;
+	text-align: center;
+	padding-left: 10vw;
+	padding-right: 10vw;
 }
 nav a {
-  color: white;
-  text-decoration: none;
-  padding: 10px;
+	color: white;
+	text-decoration: none;
+	padding: 10px;
 }
 nav {
-  display: flex;
+	display: flex;
 }
 .spell-info p {
-  text-align: left;
+	text-align: left;
+}
+.home {
+	text-align: center;
 }
