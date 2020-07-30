@@ -4,7 +4,7 @@ class MonsterInfo extends Component {
 	constructor() {
 		super();
 		this.state = {
-			monster: [],
+			monster: null,
 		};
 	}
 	componentDidMount() {
@@ -21,7 +21,8 @@ class MonsterInfo extends Component {
 			});
 	}
 	render() {
-	
+	if (this.state.monster) {
+		
 		return (
 			<div className='info'>
 				<h2>{this.state.monster.name}</h2>
@@ -45,6 +46,7 @@ class MonsterInfo extends Component {
 				</ul>
 			</div>
 		);
+	} else {return <div>There seems to be a problem please try again. </div>}
 	}
 }
 
