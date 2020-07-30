@@ -35,7 +35,7 @@ class ConditionInfo extends Component {
 				</div>
 			);
 		} else {
-	 return <div>There seems to be a problem please try again. </div>
+	 return <div>Loading...</div>
 		}
 	}
 }

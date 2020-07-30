@@ -46,7 +46,7 @@ class MonsterInfo extends Component {
 				</ul>
 			</div>
 		);
-	} else {return <div>There seems to be a problem please try again. </div>}
+	} else {return <div>Loading...</div>}
 	}
 }
 
