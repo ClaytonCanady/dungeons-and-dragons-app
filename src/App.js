@@ -6,12 +6,15 @@ import SpellList from './SpellList';
 import SpellInfo from './SpellInfo';
 import MonsterList from './MonsterList';
 import MonsterInfo from './MonsterInfo';
+import ConditionList from './ConditionList'
+import ConditionInfo from './ConditionInfo'
 class App extends Component {
 	constructor() {
 		super();
 		this.state = {
 			spells: [],
 			monsters: [],
+			conditions: []
 		};
 	}
 	componentDidMount() {
@@ -31,6 +34,14 @@ class App extends Component {
 			.catch((err) => {
 				console.error(err);
 			});
+				fetch('https://www.dnd5eapi.co/api/conditions')
+					.then((results) => results.json())
+					.then((results) => {
+						this.setState({ conditions: results.results });
+					})
+					.catch((err) => {
+						console.error(err);
+					});
 	}
 
 	render() {
@@ -44,10 +55,13 @@ class App extends Component {
 							<p>Home</p>
 						</Link>
 						<Link to='/spell-list'>
-							<p>Spell List</p>
+							<p>Spells</p>
 						</Link>
 						<Link to='/monster-list'>
-							<p>Monster List</p>
+							<p>Monsters</p>
+						</Link>
+						<Link to='/condition-list'>
+							<p>Conditions</p>
 						</Link>
 					</nav>
 				</header>
@@ -83,6 +97,26 @@ class App extends Component {
 							return (
 								<MonsterInfo
 									monsters={this.state.monsters}
+									match={routerProps.match}
+									return
+								/>
+							);
+						}}
+					/>
+					<Route
+						path='/condition-list'
+						render={() => {
+							return (
+								<ConditionList conditions={this.state.conditions} return />
+							);
+						}}
+					/>
+					<Route
+						path='/conditions/:conditionName'
+						render={(routerProps) => {
+							return (
+								<ConditionInfo
+									conditions={this.state.conditions}
 									match={routerProps.match}
 									return
 								/>
