@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 class Home extends Component {
 	render() {
 		return (
@@ -7,12 +8,24 @@ class Home extends Component {
 				<h2>About</h2>
 				<p>
 					I decided to create this app because I love D&D and wanted an easy way
-					to find information on spells and other element's of D&D 5E. Currently
-					this does not include any homebrew spells or monsters.
+					to find information on spells and other element's of D&D's 5th
+					Edition. Currently this does not include any homebrew spells or
+					monsters.
 				</p>
-				<h2>Usage</h2>
-				<p>Simply select what you need to find in the nav bar above</p>
+
 				<img src={require('../src/images/background.jpg')} alt='dragons' />
+				<footer>
+					<div>
+						Icons made by{' '}
+						<a href='https://www.flaticon.com/authors/freepik' title='Freepik'>
+							Freepik
+						</a>{' '}
+						from{' '}
+						<a href='https://www.flaticon.com/' title='Flaticon'>
+							www.flaticon.com
+						</a>
+					</div>
+				</footer>
 			</div>
 		);
 	}

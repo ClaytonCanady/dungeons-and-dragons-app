@@ -4,7 +4,7 @@ class ConditionInfo extends Component {
 	constructor() {
 		super();
 		this.state = {
-			condition: [],
+			condition: null,
 		};
 	}
 	componentDidMount() {
@@ -21,12 +21,22 @@ class ConditionInfo extends Component {
 			});
 	}
 	render() {
-		return (
-			<div className='info'>
-				<h1>{this.state.condition.name} </h1>
-        <p>{this.state.condition.desc}</p>
-			</div>
-		);
+		if (this.state.condition) {
+			
+			return (
+				<div className='info'>
+					<h1>{this.state.condition.name} </h1>
+			<ul>{this.state.condition.desc.map((element, index) => {
+				return <li key={index}>
+					{element}
+				</li>
+			}
+			)}</ul>
+				</div>
+			);
+		} else {
+			return <div></div>
+		}
 	}
 }
 

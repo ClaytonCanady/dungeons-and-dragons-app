@@ -22,7 +22,9 @@ class MonsterList extends Component {
 			return (
 				<div className='item' monster={monster[index]} key={index}>
 					<Link to={/monsters/ + monster.name} monster={monster[index]}>
-						<h1>{monster.name}</h1>
+						<h1>
+							{monster.name}
+						</h1>
 					</Link>
 				</div>
 			);
@@ -34,7 +36,7 @@ class MonsterList extends Component {
 					<input
 						type='text'
 						onChange={this.handleChange}
-						placeholder='search monsters'></input>
+						placeholder='Search Monsters'></input>
 				</form>
 				{list}
 			</div>

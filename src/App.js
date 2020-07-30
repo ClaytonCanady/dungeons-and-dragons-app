@@ -6,15 +6,15 @@ import SpellList from './SpellList';
 import SpellInfo from './SpellInfo';
 import MonsterList from './MonsterList';
 import MonsterInfo from './MonsterInfo';
-import ConditionList from './ConditionList'
-import ConditionInfo from './ConditionInfo'
+import ConditionList from './ConditionList';
+import ConditionInfo from './ConditionInfo';
 class App extends Component {
 	constructor() {
 		super();
 		this.state = {
 			spells: [],
 			monsters: [],
-			conditions: []
+			conditions: [],
 		};
 	}
 	componentDidMount() {
@@ -34,34 +34,47 @@ class App extends Component {
 			.catch((err) => {
 				console.error(err);
 			});
-				fetch('https://www.dnd5eapi.co/api/conditions')
-					.then((results) => results.json())
-					.then((results) => {
-						this.setState({ conditions: results.results });
-					})
-					.catch((err) => {
-						console.error(err);
-					});
+		fetch('https://www.dnd5eapi.co/api/conditions')
+			.then((results) => results.json())
+			.then((results) => {
+				this.setState({ conditions: results.results });
+			})
+			.catch((err) => {
+				console.error(err);
+			});
 	}
 
 	render() {
-		
 		return (
 			<div className='App'>
 				<header>
 					<h1>D&D SpellFinder</h1>
 					<nav>
 						<Link to='/'>
-							<p>Home</p>
+							<p>
+								Home <img src={require('../src/images/home.svg')} alt='home' />
+							</p>
 						</Link>
 						<Link to='/spell-list'>
-							<p>Spells</p>
+							<p>
+								Spells
+								<img
+									src={require('../src/images/spellbook.svg')}
+									alt='spellbook'
+								/>
+							</p>
 						</Link>
 						<Link to='/monster-list'>
-							<p>Monsters</p>
+							<p>
+								Monsters{' '}
+								<img src={require('../src/images/dragon.svg')} alt='dragon' />
+							</p>
 						</Link>
 						<Link to='/condition-list'>
-							<p>Conditions</p>
+							<p>
+								Conditions{' '}
+								<img src={require('../src/images/skull.svg')} alt='skull' />
+							</p>
 						</Link>
 					</nav>
 				</header>

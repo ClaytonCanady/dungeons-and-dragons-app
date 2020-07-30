@@ -31,7 +31,8 @@ this.setState({search: e.target.value})
 		return (
 			<div className='list-container'>
 				<form>
-					<input type='text' onChange={this.handleChange} placeholder='search spells'></input>
+					<input type='text' onChange={this.handleChange} placeholder='
+					Search Spells'></input>
 				</form>
 				{list}
 			</div>

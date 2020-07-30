@@ -34,7 +34,7 @@ class ConditionList extends Component {
 					<input
 						type='text'
 						onChange={this.handleChange}
-						placeholder='search conditions'></input>
+						placeholder='Search Conditions'></input>
 				</form>
 				{list}
 			</div>

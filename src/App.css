@@ -17,20 +17,24 @@ header {
 	margin: 0;
 }
 .info {
-	text-align: center;
+	text-align: justify;
 	padding-left: 10vw;
 	padding-right: 10vw;
+	align-items: center;
 }
 nav a {
 	color: white;
 	text-decoration: none;
 	padding: 10px;
 }
+nav img {
+	height: 40px;
+}
 nav {
 	display: flex;
 }
 .info p {
-	font-weight: bold;
+	font-weight: 700;
 }
 .home {
 	text-align: center;
