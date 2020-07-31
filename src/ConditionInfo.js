@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Jumbotron } from 'react-bootstrap';
 
 class ConditionInfo extends Component {
 	constructor() {
@@ -24,15 +25,16 @@ class ConditionInfo extends Component {
 		if (this.state.condition) {
 			
 			return (
-				<div className='info'>
-					<h1>{this.state.condition.name} </h1>
-			<ul>{this.state.condition.desc.map((element, index) => {
-				return <li key={index}>
-					{element}
-				</li>
-			}
-			)}</ul>
-				</div>
+				<Jumbotron>
+					<div className='info'>
+						<h1>{this.state.condition.name} </h1>
+						<ul>
+							{this.state.condition.desc.map((element, index) => {
+								return <li key={index}>{element}</li>;
+							})}
+						</ul>
+					</div>
+				</Jumbotron>
 			);
 		} else {
 	 return <div>Loading...</div>

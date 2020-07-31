@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Jumbotron } from 'react-bootstrap';
 
 class SpellInfo extends Component {
 	constructor() {
@@ -23,14 +24,21 @@ class SpellInfo extends Component {
 	render() {
 		if (this.state.spell) {
 			return (
-				<div className='info'>
-					<h2>{this.state.spell.name}</h2>
-					<h3>
-						{this.state.spell.name} is a Lvl {this.state.spell.level} spell that takes {this.state.spell.casting_time} to cast. It has a range of {this.state.spell.range}.
-					</h3>
-			<h4>This spell requires a material component of {this.state.spell.material || 'nothing.'}</h4>
-					<p>{this.state.spell.desc}</p>
-				</div>
+				<Jumbotron>
+					<div className='info'>
+						<h2>{this.state.spell.name}</h2>
+						<h3>
+							{this.state.spell.name} is a Lvl {this.state.spell.level} spell
+							that takes {this.state.spell.casting_time} to cast. It has a range
+							of {this.state.spell.range}.
+						</h3>
+						<h4>
+							This spell requires a material component of{' '}
+							{this.state.spell.material || 'nothing.'}
+						</h4>
+						<p>{this.state.spell.desc}</p>
+					</div>
+				</Jumbotron>
 			);
 			} else {return  <div>Loading...</div> }
 	}
