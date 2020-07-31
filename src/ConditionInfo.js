@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Jumbotron } from 'react-bootstrap';
+import { Jumbotron, Spinner } from 'react-bootstrap';
 
 class ConditionInfo extends Component {
 	constructor() {
@@ -37,7 +37,11 @@ class ConditionInfo extends Component {
 				</Jumbotron>
 			);
 		} else {
-	 return <div>Loading...</div>
+	 	return (
+			<Spinner animation='border' role='status'>
+				<span className='sr-only'>Loading...</span>
+			</Spinner>
+		);
 		}
 	}
 }

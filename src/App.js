@@ -8,7 +8,7 @@ import MonsterList from './MonsterList';
 import MonsterInfo from './MonsterInfo';
 import ConditionList from './ConditionList';
 import ConditionInfo from './ConditionInfo';
-import { Button } from 'react-bootstrap';
+import { Button, Nav, Spinner } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends Component {
@@ -54,7 +54,7 @@ class App extends Component {
 					<header>
 						<h1>D&D SpellFinder</h1>
 
-						<nav>
+						<Nav variant="tabs">
 							<Link to='/'>
 								<Button variant='info'>
 									Home{' '}
@@ -82,7 +82,7 @@ class App extends Component {
 									<img src={require('../src/images/skull.svg')} alt='skull' />
 								</Button>
 							</Link>
-						</nav>
+						</Nav>
 					</header>
 
 					<main>
@@ -147,7 +147,10 @@ class App extends Component {
 				</div>
 			);
 		} else {
-			return <div>Loading...</div>;
+			return(<Spinner animation='border' role='status'>
+				<span className='sr-only'>Loading...</span>
+			</Spinner>
+			)
 		}
 	}
 }
