@@ -4,7 +4,7 @@ header {
 	margin: 0;
 	padding: 1px;
 	text-align: center;
-	color: white;
+	color: rgb(255, 255, 255);
 	height: fit-content;
 	text-decoration: none;
 }
@@ -25,13 +25,14 @@ header {
 nav a {
 	color: white;
 	text-decoration: none;
-	padding: 10px;
+	padding: 4px;
 }
 nav img {
 	height: 40px;
 }
+
 nav {
-	display: flex;
+	margin: 0;
 }
 .info p {
 	font-weight: 700;
@@ -42,11 +43,10 @@ nav {
 }
 .list-container form {
 	color: white;
-	background-color: rgb(207, 31, 31);
 	text-align: center;
 }
 input {
-	width: 200px;
+	width: 40vw;
 	height: 40px;
 	margin-left: 5px;
 	font-size: large;

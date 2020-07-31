@@ -8,6 +8,9 @@ import MonsterList from './MonsterList';
 import MonsterInfo from './MonsterInfo';
 import ConditionList from './ConditionList';
 import ConditionInfo from './ConditionInfo';
+import { Button } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 class App extends Component {
 	constructor() {
 		super();
@@ -50,35 +53,38 @@ class App extends Component {
 				<div className='App'>
 					<header>
 						<h1>D&D SpellFinder</h1>
+
 						<nav>
 							<Link to='/'>
-								<p>
-									Home <img src={require('../src/images/home.svg')} alt='home' />
-								</p>
+								<Button variant='info'>
+									Home{' '}
+									<img src={require('../src/images/home.svg')} alt='home' />
+								</Button>
 							</Link>
 							<Link to='/spell-list'>
-								<p>
+								<Button variant='info'>
 									Spells
 									<img
 										src={require('../src/images/spellbook.svg')}
 										alt='spellbook'
 									/>
-								</p>
+								</Button>
 							</Link>
 							<Link to='/monster-list'>
-								<p>
+								<Button variant='info'>
 									Monsters{' '}
 									<img src={require('../src/images/dragon.svg')} alt='dragon' />
-								</p>
+								</Button>
 							</Link>
 							<Link to='/condition-list'>
-								<p>
+								<Button variant='info'>
 									Conditions{' '}
 									<img src={require('../src/images/skull.svg')} alt='skull' />
-								</p>
+								</Button>
 							</Link>
 						</nav>
 					</header>
+
 					<main>
 						<Route path='/' exact component={Home} />
 						<Route
@@ -141,7 +147,7 @@ class App extends Component {
 				</div>
 			);
 		} else {
-		 return <div>Loading...</div>
+			return <div>Loading...</div>;
 		}
 	}
 }
