@@ -56,13 +56,13 @@ class App extends Component {
 
 						<Nav variant="tabs">
 							<Link to='/'>
-								<Button variant='info'>
+								<Button variant='dark'>
 									Home{' '}
 									<img src={require('../src/images/home.svg')} alt='home' />
 								</Button>
 							</Link>
 							<Link to='/spell-list'>
-								<Button variant='info'>
+								<Button variant='dark'>
 									Spells
 									<img
 										src={require('../src/images/spellbook.svg')}
@@ -71,13 +71,13 @@ class App extends Component {
 								</Button>
 							</Link>
 							<Link to='/monster-list'>
-								<Button variant='info'>
+								<Button variant='dark'>
 									Monsters{' '}
 									<img src={require('../src/images/dragon.svg')} alt='dragon' />
 								</Button>
 							</Link>
 							<Link to='/condition-list'>
-								<Button variant='info'>
+								<Button variant='dark'>
 									Conditions{' '}
 									<img src={require('../src/images/skull.svg')} alt='skull' />
 								</Button>

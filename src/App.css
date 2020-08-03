@@ -6,6 +6,10 @@ header {
 	color: rgb(255, 255, 255);
 	height: fit-content;
 	text-decoration: none;
+	justify-content: center;
+}
+header a {
+padding-right: 5px;
 }
 
 .list-container a {
@@ -27,7 +31,7 @@ nav a {
 	padding: 4px;
 }
 header img {
-	height: 40px;
+	height: 30px;
 }
 
 nav {
