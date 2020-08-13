@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Jumbotron, Spinner } from 'react-bootstrap';
 
+// Hou comment: This component looks similar to SpellInfo - take a look at my comments on the SpellList component and see if you can refactor MonsterInfo similarly?
 class MonsterInfo extends Component {
 	constructor() {
 		super();
@@ -8,6 +9,7 @@ class MonsterInfo extends Component {
 			monster: null,
 		};
 	}
+
 	componentDidMount() {
 		const thisMonster = this.props.monsters.filter((monster) => {
 			return monster.name === this.props.match.params.monsterName;
@@ -21,39 +23,41 @@ class MonsterInfo extends Component {
 				console.error(err);
 			});
 	}
+
 	render() {
-	if (this.state.monster) {
-		
-		return (
-			<Jumbotron>
-				<div className='info'>
-					<h2>{this.state.monster.name}</h2>
-					<h4>
-						This size {this.state.monster.size} {this.state.monster.type} has a
-						challenge rating of {this.state.monster.challenge_rating} and an
-						Alignment of {this.state.monster.alignment}.
-					</h4>
-					<p>
-						This creature's languages are{' '}
-						{this.state.monster.languages || 'none'}.
-					</p>
-					<h4>Stats</h4>
-					<ul>
-						<li>Strength: {this.state.monster.strength}</li>
-						<li>Constitution: {this.state.monster.constitution}</li>
-						<li>Dexterity: {this.state.monster.dexterity}</li>
-						<li>Intelligence: {this.state.monster.intelligence}</li>
-						<li>Wisdom: {this.state.monster.wisdom}</li>
-						<li>Charisma: {this.state.monster.charisma}</li>
-					</ul>
-				</div>
-			</Jumbotron>
-		);
-	} else {	return (
-							<Spinner animation='border' role='status'>
-								<span className='sr-only'>Loading...</span>
-							</Spinner>
-						);}
+		if (this.state.monster) {
+			return (
+				<Jumbotron>
+					<div className='info'>
+						<h2>{this.state.monster.name}</h2>
+						<h4>
+							This size {this.state.monster.size} {this.state.monster.type} has a
+							challenge rating of {this.state.monster.challenge_rating} and an
+							Alignment of {this.state.monster.alignment}.
+						</h4>
+						<p>
+							This creature's languages are{' '}
+							{this.state.monster.languages || 'none'}.
+						</p>
+						<h4>Stats</h4>
+						<ul>
+							<li>Strength: {this.state.monster.strength}</li>
+							<li>Constitution: {this.state.monster.constitution}</li>
+							<li>Dexterity: {this.state.monster.dexterity}</li>
+							<li>Intelligence: {this.state.monster.intelligence}</li>
+							<li>Wisdom: {this.state.monster.wisdom}</li>
+							<li>Charisma: {this.state.monster.charisma}</li>
+						</ul>
+					</div>
+				</Jumbotron>
+			);
+		} else {	
+			return (
+				<Spinner animation='border' role='status'>
+					<span className='sr-only'>Loading...</span>
+				</Spinner>
+			);
+		}
 	}
 }
 

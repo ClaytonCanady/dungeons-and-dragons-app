@@ -8,9 +8,12 @@ import MonsterList from './MonsterList';
 import MonsterInfo from './MonsterInfo';
 import ConditionList from './ConditionList';
 import ConditionInfo from './ConditionInfo';
+// Hou comment: Great job leveraging react-bootstrap for your app!
 import { Button, Nav, Spinner } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+// Hou comment: As a follow up challenge, I'd encourage you to 
+// learn about and refactor your entire app using React Hooks!
 class App extends Component {
 	constructor() {
 		super();
@@ -21,6 +24,11 @@ class App extends Component {
 		};
 	}
 	componentDidMount() {
+		// Hou comment: You could potentially refactor your multiple fetch calls and make them more succinct by using the Promise.all() method: https://gomakethings.com/waiting-for-multiple-all-api-responses-to-complete-with-the-vanilla-js-promise.all-method/
+
+		// Hou comment: as a follow up challenge, read about the async/await pattern and try to refactor
+		// your fetch call to use that pattern: https://dev.to/shoupn/javascript-fetch-api-and-using-asyncawait-47mp
+
 		fetch('https://www.dnd5eapi.co/api/monsters')
 			.then((results) => results.json())
 			.then((results) => {
@@ -47,13 +55,24 @@ class App extends Component {
 			});
 	}
 
+	// Hou comment: you could use destructuring to extract your state into variables at the top of the function, so you don't have to access them repeatedly in this.state
+	// const {
+	//  conditions,
+	// 	monsters,
+	// 	spells
+	// } = this.state;
+	// Then you could do:
+			// <SpellInfo
+			// spells={spells}
+			// match={routerProps.match}
+			// />
+	// As a follow-up challenge, consider refactoring all your components to use this destructuring pattern.
 	render() {
 		if (this.state.monsters && this.state.spells && this.state.conditions) {
 			return (
 				<div className='App'>
 					<header>
-						<h1>D&D SpellFinder</h1>
-
+						<h1>D&amp;D SpellFinder</h1>
 						<Nav variant="tabs">
 							<Link to='/'>
 								<Button variant='dark'>
@@ -147,9 +166,11 @@ class App extends Component {
 				</div>
 			);
 		} else {
-			return(<Spinner animation='border' role='status'>
-				<span className='sr-only'>Loading...</span>
-			</Spinner>
+			// Hou comment: Nice!
+			return(
+				<Spinner animation='border' role='status'>
+					<span className='sr-only'>Loading...</span>
+				</Spinner>
 			)
 		}
 	}
