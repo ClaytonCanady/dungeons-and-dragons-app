@@ -12,6 +12,7 @@ class SpellInfo extends Component {
 		const thisSpell = this.props.spells.filter((spell) => {
 			return spell.name === this.props.match.params.spellName;
 		})[0];
+
 		fetch(`https://www.dnd5eapi.co${thisSpell.url}`)
 			.then((results) => results.json())
 			.then((results) => {
@@ -21,31 +22,42 @@ class SpellInfo extends Component {
 				console.error(err);
 			});
 	}
+
 	render() {
 		if (this.state.spell) {
+			// Hou comment: let's destructure this.state.spell!
+			const {
+				casting_time,
+				desc,
+				level,
+				material,
+				name,
+				range,
+			} = this.state.spell;
+			
 			return (
 				<Jumbotron>
 					<div className='info'>
-						<h2>{this.state.spell.name}</h2>
+						<h2>{name}</h2>
 						<h3>
-							{this.state.spell.name} is a Lvl {this.state.spell.level} spell
-							that takes {this.state.spell.casting_time} to cast. It has a range
-							of {this.state.spell.range}.
+							{name} is a Lvl {level} spell
+							that takes {casting_time} to cast. It has a range
+							of {range}.
 						</h3>
 						<h4>
 							This spell requires a material component of{' '}
-							{this.state.spell.material || 'nothing.'}
+							{material || 'nothing.'}
 						</h4>
-						<p>{this.state.spell.desc}</p>
+						<p>{desc}</p>
 					</div>
 				</Jumbotron>
 			);
 			} else {
-					return (
-						<Spinner animation='border' role='status'>
-							<span className='sr-only'>Loading...</span>
-						</Spinner>
-					);
+				return (
+					<Spinner animation='border' role='status'>
+						<span className='sr-only'>Loading...</span>
+					</Spinner>
+				);
 			}
 	}
 }

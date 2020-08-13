@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+
+// Hou comment: This component looks similar to SpellList - take a look at my comments on the SpellList component and see if you can refactor MonsterList similarly?
 class MonsterList extends Component {
 	constructor() {
 		super();

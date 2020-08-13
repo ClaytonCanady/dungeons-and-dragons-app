@@ -12,6 +12,7 @@ class ConditionInfo extends Component {
 		const thisCondition = this.props.conditions.filter((condition) => {
 			return condition.name === this.props.match.params.conditionName;
 		})[0];
+
 		fetch(`https://www.dnd5eapi.co${thisCondition.url}`)
 			.then((results) => results.json())
 			.then((results) => {
@@ -23,25 +24,29 @@ class ConditionInfo extends Component {
 	}
 	render() {
 		if (this.state.condition) {
-			
+			const {
+				name,
+				desc,
+			} = this.state.condition;
+
 			return (
 				<Jumbotron>
 					<div className='info'>
-						<h1>{this.state.condition.name} </h1>
+						<h1>{name} </h1>
 						<ul>
-							{this.state.condition.desc.map((element, index) => {
-								return <li key={index}>{element}</li>;
+							{desc.map((element, index) => {
+								return <li key={`${element}-${index}`}>{element}</li>;
 							})}
 						</ul>
 					</div>
 				</Jumbotron>
 			);
 		} else {
-	 	return (
-			<Spinner animation='border' role='status'>
-				<span className='sr-only'>Loading...</span>
-			</Spinner>
-		);
+			return (
+				<Spinner animation='border' role='status'>
+					<span className='sr-only'>Loading...</span>
+				</Spinner>
+			);
 		}
 	}
 }
