@@ -8,8 +8,15 @@ header {
 	text-decoration: none;
 	justify-content: center;
 }
+.home p {
+	padding: 0 10%;
+}
+
+.about p {
+	padding: 0 10%;
+}
 header a {
-padding-right: 5px;
+	padding-right: 5px;
 }
 
 .list-container a {

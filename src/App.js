@@ -8,6 +8,7 @@ import MonsterList from './MonsterList';
 import MonsterInfo from './MonsterInfo';
 import ConditionList from './ConditionList';
 import ConditionInfo from './ConditionInfo';
+import About from './About'
 import { Button, Nav, Spinner } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -54,7 +55,7 @@ class App extends Component {
 					<header>
 						<h1>D&D SpellFinder</h1>
 
-						<Nav variant="tabs">
+						<Nav variant='tabs'>
 							<Link to='/'>
 								<Button variant='dark'>
 									Home{' '}
@@ -80,6 +81,13 @@ class App extends Component {
 								<Button variant='dark'>
 									Conditions{' '}
 									<img src={require('../src/images/skull.svg')} alt='skull' />
+								</Button>
+							</Link>
+
+							<Link to='/about'>
+								<Button variant='dark'>
+									About{' '}
+									<img src={require('../src/images/about.svg')} alt='skull' />
 								</Button>
 							</Link>
 						</Nav>
@@ -143,6 +151,8 @@ class App extends Component {
 								);
 							}}
 						/>
+
+						<Route path='/about' component={About}/>
 					</main>
 				</div>
 			);

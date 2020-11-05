@@ -4,14 +4,8 @@ class Home extends Component {
 	render() {
 		return (
 			<div className='home'>
-				<h1>The D&D SpellFinder</h1>
-				<h2>About</h2>
-				<p>
-					I decided to create this app because I love D&D and wanted an easy way
-					to find information on spells and other element's of D&D's 5th
-					Edition. Currently this does not include any homebrew spells or
-					monsters.
-				</p>
+				<h1 className='py-3'>Welcome</h1>
+				<p>This application features filterable search. If you want to find a spell simply click the spells tab and start typing the name.</p>
 
 				<img src={require('../src/images/background.jpg')} alt='dragons' />
 				<footer>

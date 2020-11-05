@@ -26,27 +26,33 @@ class SpellInfo extends Component {
 			return (
 				<Jumbotron>
 					<div className='info'>
-						<h2>{this.state.spell.name}</h2>
+						<h1>{this.state.spell.name}</h1>
+						<ul className='pt-2'>
+							<h3>Classes</h3>
+							{this.state.spell.classes.map((n) => {
+								return <li>{n.name}</li>;
+							})}
+						</ul>
 						<h3>
-							{this.state.spell.name} is a Lvl {this.state.spell.level} spell
-							that takes {this.state.spell.casting_time} to cast. It has a range
-							of {this.state.spell.range}.
+							A lvl {this.state.spell.level} spell that takes{' '}
+							{this.state.spell.casting_time} to cast. It has a range of{' '}
+							{this.state.spell.range}.
 						</h3>
-						<h4>
-							This spell requires a material component of{' '}
-							{this.state.spell.material || 'nothing.'}
+						<h4 className='pt-3'>
+							This spell requires{' '}
+							{this.state.spell.material || 'no material component.'}
 						</h4>
-						<p>{this.state.spell.desc}</p>
+						<p className='pt-3'>{this.state.spell.desc}</p>
 					</div>
 				</Jumbotron>
 			);
-			} else {
-					return (
-						<Spinner animation='border' role='status'>
-							<span className='sr-only'>Loading...</span>
-						</Spinner>
-					);
-			}
+		} else {
+			return (
+				<Spinner animation='border' role='status'>
+					<span className='sr-only'>Loading...</span>
+				</Spinner>
+			);
+		}
 	}
 }
 

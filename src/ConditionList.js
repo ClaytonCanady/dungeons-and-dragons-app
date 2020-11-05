@@ -30,7 +30,7 @@ class ConditionList extends Component {
 
 		return (
 			<div className='list-container'>
-				<form>
+				<form className='pt-3'>
 					<input
 						type='text'
 						onChange={this.handleChange}
