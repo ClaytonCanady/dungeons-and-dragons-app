@@ -47,14 +47,15 @@ class MonsterInfo extends Component {
 							<li>Charisma: {this.state.monster.charisma}</li>
 						</ul>
 						<ul className='pt-2'>
-							<h3>Abilities</h3>
-							{this.state.monster.special_abilities.map((n) => {
-								return (
-									<li>
-										{n.name}: {n.desc}
-									</li>
-								);
-							})}
+							<h3>Special Abilities</h3>
+							{this.state.monster.special_abilities &&
+								this.state.monster.special_abilities.map((n) => {
+									return (
+										<li>
+											{n.name}: {n.desc}
+										</li>
+									);
+								})}
 						</ul>
 					</div>
 				</Jumbotron>
